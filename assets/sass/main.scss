@@ -888,7 +888,7 @@
 		top: 0;
 		left: 0;
 		z-index: 1000;
-		background-color: rgba(255, 255, 255, 0.95);
+		background-color: rgba(0, 0, 0, 0.95);
 		background-image: url('images/overlay.png');
 		width: 100%;
 		height: 3.25em;
@@ -924,7 +924,7 @@
 				position: relative;
 				display: block;
 				text-decoration: none;
-				color: #6b7770;
+				color: #000000;
 				top: -6px;
 				padding: 6px 1.5em 0.25em 1.5em;
 				border-bottom-left-radius: 6px;
@@ -938,20 +938,20 @@
 
 			&:hover {
 				a, span {
-					background: #C1CAC5;
+					background: #000000;
 					color: #fff;
 				}
 			}
 
 			&.active {
 				a, span {
-					background: #C1CAC5;
+					background: #000000;
 					color: #fff;
 				}
 			}
 
 			&.current a {
-				background: #b1ddab;
+				background: #edbb5f;
 				color: #fff;
 			}
 		}
@@ -959,7 +959,7 @@
 
 	.dropotron {
 		list-style: none;
-		background: #6B7770;
+		background: #000000;
 		color: #fff;
 		border-radius: 6px;
 		line-height: 2.75em;
@@ -993,7 +993,7 @@
 			&.active {
 				> a, > span {
 					color: #fff;
-					background: #7B8780;
+					background: #000000;
 				}
 			}
 
