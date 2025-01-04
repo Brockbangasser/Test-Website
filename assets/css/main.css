@@ -72,6 +72,11 @@ input, select, textarea {
 	appearance: none;
 }
 
+@font-face{
+    font-family: 'Catchy';
+	src: url('../cm-font/catchy-mager.ttf') format(truetype);
+}
+
 /* Basic */
 
 	html {
@@ -1786,11 +1791,11 @@ input, select, textarea {
 	input[type="reset"],
 	button,
 	.button {
-		-webkit-appearance: none;
 		display: inline-block;
 		font-family: 'Open Sans Condensed', sans-serif;
-		font-weight: 700;
+		font-weight: 100;
 		text-transform: uppercase;
+		letter-spacing: 2px;
 		text-decoration: none;
 		background: #a8823d;
 		color: #fff;
@@ -2375,7 +2380,6 @@ input, select, textarea {
 				color: #fff;
 			}
 
-/* Banner */
 
 	#banner {
 		position: relative;
@@ -2384,40 +2388,45 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		background-size: cover;
 		z-index: 1;
-		padding: 18.7rem 0;
+		padding: 18rem 0;
 	}
 
 		#banner .content {
-			position: relative;
-			text-align: bottom;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
 			margin: 0;
-			padding: 4em 0 3.5em 0;
+			margin-bottom: 0;
+			padding: 0;}
+		#banner .content h2 {
+			font-family: 'Catchy';
+			font-weight: 400;
+			text-transform: uppercase;
+			color: #ffffff;
+			font-size: 6.5em;
+			margin-bottom: 0em; /* Adjusted margin */
+			line-height: 90%;
 		}
 
-			#banner .content h2 {
-				color: #fff;
-				font-size: 2.75em;
-				margin: 0 0 0.5em 0;
-			}
-
-			#banner .content p {
-				display: block;
-				font-family: 'Open Sans Condensed', sans-serif;
-				font-weight: 700;
-				text-transform: uppercase;
-				color: #575d59;
-				font-size: 1.35em;
-				margin: 0 0 1.25em 0;
-			}
+		#banner .content p {	
+			font-family: 'Catchy';
+			font-weight: 50;
+			color: #ffffff;
+			font-size: 2.7em;
+			margin-top: 15px; /* Removed top margin */
+			margin-bottom: 15px; /* Adjusted margin */
+		}
 
 			#banner .content .button {
-				position: relative;
 				color: #ffffff;
-				left: 600px;
-				top: 100px;
 				border: solid 2px #a8823d;
 				border-color: #a8823d;
 				font-size: 1em;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 1em; /* Adjusted margin */
 			}
 
 				#banner .content .button:hover {
