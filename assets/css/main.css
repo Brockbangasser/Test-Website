@@ -1736,16 +1736,16 @@ input, select, textarea {
 
 	
 	#joinBanner {
-			padding-top: 10rem; /* Adjust the value as needed */
-			position: relative;
-			background-image: url("../../images/join_banner.jpg");
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			z-index: 1;
-			height: 400px;
-		}
-	
+		padding-top: 10rem; /* Adjust the value as needed */
+		position: relative;
+		background-image: url("../../images/join_banner.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 1;
+		height: 400px;
+	}
 	#agentsBanner {
 		padding-bottom: 10rem; /* Adjust the value as needed */
 		position: relative;
@@ -1753,6 +1753,7 @@ input, select, textarea {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-attachment: fixed;
 		z-index: 1;
 		height: 400px;
 	}
@@ -2410,6 +2411,7 @@ input, select, textarea {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-attachment: fixed;
 		z-index: 1;
 		padding: 18rem 0;
 	}
