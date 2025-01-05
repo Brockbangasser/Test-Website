@@ -88,7 +88,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f2f5f3;
+		background: #565656;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -109,6 +109,7 @@ input, select, textarea {
 		font-size: 13pt;
 		line-height: 2em;
 	}
+
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Open Sans Condensed', sans-serif;
@@ -1733,6 +1734,29 @@ input, select, textarea {
 
 		}
 
+	
+	#joinBanner {
+			padding-top: 10rem; /* Adjust the value as needed */
+			position: relative;
+			background-image: url("../../images/join_banner.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 1;
+			height: 400px;
+		}
+	
+	#agentsBanner {
+		padding-bottom: 10rem; /* Adjust the value as needed */
+		position: relative;
+		background-image: url("../../images/agents_banner.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1;
+		height: 400px;
+	}
+
 /* Image */
 
 	.image {
@@ -2379,12 +2403,11 @@ input, select, textarea {
 				background: #000000;
 				color: #fff;
 			}
-
-
+	
 	#banner {
 		position: relative;
 		background-image:url("../../images/banner.jpg");
-		background-position: center center;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		z-index: 1;
@@ -2397,8 +2420,10 @@ input, select, textarea {
 			align-items: center;
 			text-align: center;
 			margin: 0;
+			margin-top: -6em; /* Adjusted margin */
 			margin-bottom: 0;
 			padding: 0;}
+
 		#banner .content h2 {
 			font-family: 'Catchy';
 			font-weight: 400;
@@ -2554,6 +2579,7 @@ input, select, textarea {
 
 			#main {
 				border-top-width: 0;
+				background-color: black;
 			}
 
 		/* Sidebar */
@@ -2583,6 +2609,7 @@ input, select, textarea {
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				padding-bottom: 1px;
+				background-color: #000000;
 			}
 
 			#titleBar {
