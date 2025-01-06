@@ -1736,16 +1736,18 @@ input, select, textarea {
 
 	
 	#joinBanner {
-		padding-top: 10rem; /* Adjust the value as needed */
-		position: relative;
-		background-image: url("../../images/join_banner.jpg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
+		padding-top: 0;    /* Remove any gap at the top */
+		position: relative; /* Keeps the element in normal flow */
 		z-index: 1;
-		height: 400px;
+		width: 100%;        /* Ensure the container spans full width */
+		height: 30vh;       /* Set the container height to 30% of viewport height */
+		background-image: url("../../images/join_banner.jpg"); /* Set the background image */
+		background-position: 50% 40%;  /* Center the image horizontally and vertically */
+		background-size: cover;       /* Ensure the background image covers the container */
+		background-attachment: fixed; /* Keep the background image fixed during scrolling */
+		overflow: hidden;   /* Ensures that any overflow (cropped parts) is hidden */
 	}
+
 	#agentsBanner {
 		padding-bottom: 10rem; /* Adjust the value as needed */
 		position: relative;
