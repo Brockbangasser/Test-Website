@@ -2405,46 +2405,52 @@ input, select, textarea {
 				color: #fff;
 			}
 	
-	#banner {
-		position: relative;
-		background-image:url("../../images/banner.jpg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		z-index: 1;
-		padding: 18rem 0;
-	}
-
-		#banner .content {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			margin: 0;
-			margin-top: -6em; /* Adjusted margin */
-			margin-bottom: 0;
-			padding: 0;}
-
-		#banner .content h2 {
-			font-family: 'Catchy';
-			font-weight: 400;
-			text-transform: uppercase;
-			color: #ffffff;
-			font-size: 6.5em;
-			margin-bottom: 0em; /* Adjusted margin */
-			line-height: 90%;
-		}
-
-		#banner .content p {	
-			font-family: 'Catchy';
-			font-weight: 50;
-			color: #ffffff;
-			font-size: 2.7em;
-			margin-top: 15px; /* Removed top margin */
-			margin-bottom: 15px; /* Adjusted margin */
-		}
-
+			#banner {
+				position: relative;
+				background-image: url("../../images/banner.jpg");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover; /* Ensures the image covers the entire container */
+				background-attachment: fixed; /* Keeps the background fixed during scroll */
+				z-index: 1;
+				width: 100%;
+				height: 100vh; /* Makes the banner take up the entire height of the viewport */
+				padding: 0; /* Remove any padding to avoid extra spacing */
+			}
+			
+			
+			#banner .content {
+				position: relative; /* So it stays above the overlay */
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				margin: 0;
+				padding: 0;
+				z-index: 1; /* Ensure content stays above overlay */
+				color: #fff; /* Ensure text is white */
+				padding-top: 25vh; /* Adds space from top, making the content vertically centered */
+			}
+			
+			#banner .content h2 {
+				font-family: 'Catchy';
+				font-weight: 400;
+				text-transform: uppercase;
+				color: #ffffff;
+				font-size: 6.5em;
+				margin-bottom: 0em;
+				line-height: 90%;
+			}
+			
+			#banner .content p {
+				font-family: 'Catchy';
+				font-weight: 50;
+				color: #ffffff;
+				font-size: 2.7em;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			
 			#banner .content .button {
 				color: #ffffff;
 				border: solid 2px #a8823d;
@@ -2453,20 +2459,20 @@ input, select, textarea {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				margin-top: 1em; /* Adjusted margin */
+				margin-top: 1em;
 			}
-
-				#banner .content .button:hover {
-					color: #ffffff;
-					background-color: #000000;
-					border-color: #000000;
-				}
-
-				#banner .content .button:active {
-					color: #ffffff;
-					border-color: #a8823d;
-				}
-
+			
+			#banner .content .button:hover {
+				color: #ffffff;
+				background-color: #000000;
+				border-color: #000000;
+			}
+			
+			#banner .content .button:active {
+				color: #ffffff;
+				border-color: #a8823d;
+			}
+			
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
