@@ -178,7 +178,7 @@ html {
 }
 
 body {
-	background: #f7f6f5;
+	background: #e0e0e0;
 }
 
 body.is-preload *,
@@ -383,7 +383,6 @@ header>p {
 }
 
 /* Row */
-/* Row */
 #agentsGrid {
     display: flex;
     justify-content: center; /* Center the grid horizontally */
@@ -413,10 +412,9 @@ header>p {
 
 /* Image container to position the details box below the image */
 .image-container {
-    position: relative;
     width: 100%;
     text-align: center;
-    margin-bottom: 0; /* Ensure no space between image and details box */
+    position: relative; /* Ensure the dialog box is positioned relative to this container */
 }
 
 /* Images styling */
@@ -425,6 +423,7 @@ header>p {
     aspect-ratio: 1 / 1;  /* Square images */
     object-fit: cover;    /* Ensure image content fills the square */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+    z-index: 1;           /* Ensure the image is above the details box */
 }
 
 /* Styling for the white box underneath the image */
@@ -433,10 +432,8 @@ header>p {
     padding: 1em;
     width: 100%;
     text-align: center;
-    margin-top: -20px; /* Bring the details box slightly above */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
-    position: relative; /* Keep it in normal document flow */
-    z-index: 1;           /* Behind the image */
+    z-index: 0; /* Behind the image */
 }
 
 .agent-details h3 {
@@ -461,11 +458,9 @@ header>p {
     padding: 1em;
     display: none; /* Hidden initially */
     opacity: 0;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth fade and movement */
     z-index: 1000;
 }
 
-/* Show the dialog box when hovering over the image */
 .image-container:hover .dialog-box {
     display: block;
     opacity: 1; /* Make it visible */
@@ -476,15 +471,6 @@ header>p {
     transform: scale(1.03); /* Slight zoom on hover */
     transition: transform 0.3s ease-in-out;
 }
-
-.agent-img:hover .dialog-box{
-	transform: scale(1.03); /* Slight zoom on hover */
-    transition: transform 0.3s ease-in-out;
-}
-
-
-
-
 
 
 
