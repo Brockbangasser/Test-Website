@@ -178,7 +178,7 @@ html {
 }
 
 body {
-	background: #e0e0e0;
+	background: #d4d4d4;
 }
 
 body.is-preload *,
@@ -342,6 +342,13 @@ header>p {
 	width: 64em;
 }
 
+@media screen and (min-width: 1681px) {
+
+	.container {
+		width: 90em;
+	}
+}
+
 @media screen and (max-width: 1680px) {
 
 	.container {
@@ -353,7 +360,7 @@ header>p {
 @media screen and (max-width: 1280px) {
 
 	.container {
-		width: calc(100% - 100px);
+		width: 60em;
 	}
 
 }
@@ -361,24 +368,31 @@ header>p {
 @media screen and (max-width: 980px) {
 
 	.container {
-		width: calc(100% - 100px);
+		width: 45em;
 	}
+
 
 }
 
 @media screen and (max-width: 736px) {
 
 	.container {
-		width: calc(100% - 40px);
+		width: 30em;
 	}
+	.col-4 {
+        width: 100%; /* 1 column for small screens */
+    }
 
 }
 
 @media screen and (max-width: 360px) {
 
 	.container {
-		width: calc(100% - 30px);
+		width: 10em;
 	}
+	.col-4 {
+        width: 100%; /* 1 column for small screens */
+    }
 
 }
 
@@ -402,19 +416,56 @@ header>p {
 
 /* Columns for images */
 .col-4 {
-    width: 33.33%; /* Three columns per row */
-    padding: 0;    /* Remove padding to prevent spacing around columns */
+    flex-basis: 33.33%; /* 3 columns by default */
+    padding: 0;
     display: flex;
-    justify-content: center; /* Center the content within each column */
-    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 /* Image container to position the details box below the image */
+/* Wrapper for the entire agent card */
 .image-container {
-    width: 100%;
+    display: inline-block; /* Shrink-wrap content */
+    text-align: center; /* Center-align text */
+    background-color: white; /* White background for the entire container */
+    padding: 20px; /* Spacing inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding doesn't affect size */
+    width: 100%; /* Ensure it fills parent column width */
+    height: auto; /* Adjust height dynamically based on content */
+}
+
+/* Agent Image */
+.agent-img {
+    width: 100%; /* Full width */
+    aspect-ratio: 1 / 1; /* Square image */
+    object-fit: cover; /* Maintain aspect ratio within the container */
+    border-radius: 8px; /* Match container’s rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Subtle shadow */
+}
+
+/* Agent Details */
+.agent-details {
+    margin-top: .2em; /* Space between the image and the text */
     text-align: center;
-    position: relative; /* Ensure the dialog box is positioned relative to this container */
+}
+
+/* Agent Name (Heading) */
+.agent-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+/* Contact Information */
+.agent-details p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
 }
 
 /* Images styling */
@@ -424,32 +475,9 @@ header>p {
     object-fit: cover;    /* Ensure image content fills the square */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
     z-index: 1;           /* Ensure the image is above the details box */
+	border-radius: 8px;   /* Rounded corners */
 }
 
-/* Styling for the white box underneath the image */
-.agent-details {
-	background-color: white;
-	padding: 1em;
-	width: 100%;
-	text-align: center;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
-	z-index: 0; /* Behind the image */
-	border-radius: 8px; /* Rounded corners */
-}
-
-.agent-details h3 {
-    margin: 0;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 0;
-    margin-bottom: 0.2em; /* Adjusted for slight spacing */
-}
-
-.agent-details p {
-    padding: 0;
-    margin: 0; /* Removed margin-top and margin-bottom for consistency */
-    font-size: 0.8em;
-}
 
 
 /* Dialog box hidden by default */
@@ -473,159 +501,257 @@ header>p {
 }
 
 /* Optional: add a hover effect for the images */
-.agent-img:hover {
+.image-container:hover {
     transform: scale(1.03); /* Slight zoom on hover */
     transition: transform 0.3s ease-in-out;
 }
 
 
 @media screen and (min-width: 1681px) {
-	/* Adjust the row layout for larger screens */
 	.row {
 		display: flex;
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
-		margin-top: -75px; /* Adjust margin */
-		margin-left: -75px; /* Adjust margin */
 	}
 
 	.row>* {
 		box-sizing: border-box;
-		padding: 75px 0 0 75px; /* Adjust padding */
 	}
 
-	/* Ensure uniform grid layout adjustments */
-	.row.gtr-uniform>* {
-		padding-top: 75px;
+	.row.gtr-uniform>*> :last-child {
+		margin-bottom: 0;
 	}
 
-	/* Adjusting individual column widths for larger screens */
+	.row.aln-left {
+		justify-content: flex-start;
+	}
+
+	.row.aln-center {
+		justify-content: center;
+	}
+
+	.row.aln-right {
+		justify-content: flex-end;
+	}
+
+	.row.aln-top {
+		align-items: flex-start;
+	}
+
+	.row.aln-middle {
+		align-items: center;
+	}
+
+	.row.aln-bottom {
+		align-items: flex-end;
+	}
+
+	.row>.imp-medium {
+		order: -1;
+	}
+
 	.row>.col-1-medium {
-		width: 10%; /* Increase width for larger screens */
+		width: 8.33333%;
 	}
 
 	.row>.off-1-medium {
-		margin-left: 10%; /* Increase margin */
+		margin-left: 8.33333%;
 	}
 
 	.row>.col-2-medium {
-		width: 20%;
+		width: 16.66667%;
 	}
 
 	.row>.off-2-medium {
-		margin-left: 20%;
+		margin-left: 16.66667%;
 	}
 
 	.row>.col-3-medium {
-		width: 30%;
+		width: 25%;
 	}
 
 	.row>.off-3-medium {
-		margin-left: 30%;
+		margin-left: 25%;
 	}
 
 	.row>.col-4-medium {
-		width: 40%;
+		width: 33.33333%;
 	}
 
 	.row>.off-4-medium {
-		margin-left: 40%;
+		margin-left: 33.33333%;
 	}
 
 	.row>.col-5-medium {
-		width: 50%;
+		width: 41.66667%;
 	}
 
 	.row>.off-5-medium {
-		margin-left: 50%;
+		margin-left: 41.66667%;
 	}
 
 	.row>.col-6-medium {
-		width: 60%;
+		width: 50%;
 	}
 
 	.row>.off-6-medium {
-		margin-left: 60%;
+		margin-left: 50%;
 	}
 
 	.row>.col-7-medium {
-		width: 70%;
+		width: 58.33333%;
 	}
 
 	.row>.off-7-medium {
-		margin-left: 70%;
+		margin-left: 58.33333%;
 	}
 
 	.row>.col-8-medium {
-		width: 80%;
+		width: 66.66667%;
 	}
 
 	.row>.off-8-medium {
-		margin-left: 80%;
+		margin-left: 66.66667%;
 	}
 
 	.row>.col-9-medium {
-		width: 90%;
+		width: 75%;
 	}
 
 	.row>.off-9-medium {
-		margin-left: 90%;
+		margin-left: 75%;
 	}
 
 	.row>.col-10-medium {
-		width: 95%;
+		width: 83.33333%;
 	}
 
 	.row>.off-10-medium {
-		margin-left: 95%;
+		margin-left: 83.33333%;
 	}
 
 	.row>.col-11-medium {
-		width: 100%;
+		width: 91.66667%;
 	}
 
 	.row>.off-11-medium {
+		margin-left: 91.66667%;
+	}
+
+	.row>.col-12-medium {
+		width: 100%;
+	}
+
+	.row>.off-12-medium {
 		margin-left: 100%;
 	}
 
-	/* Adjust grid spacings */
+	.row.gtr-0 {
+		margin-top: 0px;
+		margin-left: 0px;
+	}
+
+	.row.gtr-0>* {
+		padding: 0px 0 0 0px;
+	}
+
+	.row.gtr-0.gtr-uniform {
+		margin-top: 0px;
+	}
+
+	.row.gtr-0.gtr-uniform>* {
+		padding-top: 0px;
+	}
+
+	.row.gtr-25 {
+		margin-top: -12.5px;
+		margin-left: -12.5px;
+	}
+
+	.row.gtr-25>* {
+		padding: 12.5px 0 0 12.5px;
+	}
+
+	.row.gtr-25.gtr-uniform {
+		margin-top: -12.5px;
+	}
+
+	.row.gtr-25.gtr-uniform>* {
+		padding-top: 12.5px;
+	}
+
+	.row.gtr-50 {
+		margin-top: -25px;
+		margin-left: -25px;
+	}
+
+	.row.gtr-50>* {
+		padding: 25px 0 0 25px;
+	}
+
+	.row.gtr-50.gtr-uniform {
+		margin-top: -25px;
+	}
+
+	.row.gtr-50.gtr-uniform>* {
+		padding-top: 25px;
+	}
+
+	.row {
+		margin-top: -50px;
+		margin-left: -50px;
+	}
+
+	.row>* {
+		padding: 50px 0 0 50px;
+	}
+
+	.row.gtr-uniform {
+		margin-top: -50px;
+	}
+
+	.row.gtr-uniform>* {
+		padding-top: 50px;
+	}
+
 	.row.gtr-150 {
+		margin-top: -75px;
+		margin-left: -75px;
+	}
+
+	.row.gtr-150>* {
+		padding: 75px 0 0 75px;
+	}
+
+	.row.gtr-150.gtr-uniform {
+		margin-top: -75px;
+	}
+
+	.row.gtr-150.gtr-uniform>* {
+		padding-top: 75px;
+	}
+
+	.row.gtr-200 {
 		margin-top: -100px;
 		margin-left: -100px;
 	}
 
-	.row.gtr-150>* {
+	.row.gtr-200>* {
 		padding: 100px 0 0 100px;
 	}
 
-	.row.gtr-150.gtr-uniform {
+	.row.gtr-200.gtr-uniform {
 		margin-top: -100px;
 	}
 
-	.row.gtr-150.gtr-uniform>* {
+	.row.gtr-200.gtr-uniform>* {
 		padding-top: 100px;
 	}
 
-	/* Adjust for very large screens */
-	.row.gtr-200 {
-		margin-top: -125px;
-		margin-left: -125px;
-	}
 
-	.row.gtr-200>* {
-		padding: 125px 0 0 125px;
-	}
 
-	.row.gtr-200.gtr-uniform {
-		margin-top: -125px;
-	}
-
-	.row.gtr-200.gtr-uniform>* {
-		padding-top: 125px;
-	}
 }
-
 
 @media screen and (max-width: 1680px) {
 
@@ -2656,6 +2782,22 @@ table.default thead {
 
 /* XLarge */
 
+
+@media screen and (min-width: 1681px) {
+
+	/* Basic */
+
+	body,
+	input,
+	textarea,
+	select {
+		font-size: 12pt;
+		line-height: 1.75em;
+	}
+
+}
+
+
 @media screen and (max-width: 1680px) {
 
 	/* Basic */
@@ -2776,7 +2918,7 @@ table.default thead {
 
 	#main {
 		border-top-width: 0;
-		background-color: black;
+		background-color: #d6d6d6;
 	}
 
 	/* Sidebar */
@@ -3123,7 +3265,7 @@ table.default thead {
 	/* Sidebar */
 
 	.sidebar {
-		border-top: solid 2px #e7eae8;
+		border-top: solid 2px #5e5e5e;
 		padding-top: 50px;
 		margin-top: 30px;
 	}
