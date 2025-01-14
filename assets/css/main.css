@@ -428,12 +428,13 @@ header>p {
 
 /* Styling for the white box underneath the image */
 .agent-details {
-    background-color: white;
-    padding: 1em;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
-    z-index: 0; /* Behind the image */
+	background-color: white;
+	padding: 1em;
+	width: 100%;
+	text-align: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+	z-index: 0; /* Behind the image */
+	border-radius: 8px; /* Rounded corners */
 }
 
 .agent-details h3 {
