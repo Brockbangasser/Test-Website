@@ -1187,6 +1187,7 @@ body {
     overflow: hidden; /* Ensures content stays within the column */
 }
 .column-66 {
+	padding: 0;
     padding-left: 16px;
     flex: 0 0 66%;
     background-color: #ffffff;
@@ -1194,7 +1195,7 @@ body {
 }
 
 .column-66 h1 {
-    font-size: 35px;
+    font-size: 45px;
     color: #242424;
     margin-bottom: 0;
 }
