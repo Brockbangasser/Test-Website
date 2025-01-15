@@ -178,7 +178,7 @@ html {
 }
 
 body {
-	background: #d4d4d4;
+	background: #ffffff;
 }
 
 body.is-preload *,
@@ -382,7 +382,6 @@ header>p {
 	.col-4 {
         width: 100%; /* 1 column for small screens */
     }
-
 }
 
 @media screen and (max-width: 360px) {
@@ -394,6 +393,45 @@ header>p {
         width: 100%; /* 1 column for small screens */
     }
 
+}
+
+#aboutUsBanner {
+	background-color: #ffffff;
+	text-align: center; /* Centers the entire content */
+	height: 22em;
+	
+}
+
+#aboutUsBanner h2 {
+	color: #000000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	font-size: 3em;
+	text-align: center;
+	position: relative; /* Needed for positioning the pseudo-element */
+	display: inline-block; /* Ensures the width is only as wide as the text */
+	padding-bottom: 7px;
+	padding-top: 1.3em;
+	word-wrap: break-word; /* Break long words */
+	overflow-wrap: break-word; /* Break words cleanly */
+}
+
+#aboutUsBanner h2::after {
+	content: "";
+	position: absolute;
+	width: 140%; /* Adjust to make it 1.25x the text width */
+	height: 2px; /* Line thickness */
+	background-color: #a8823d; /* Line color */
+	left: 50%; /* Start at the middle */
+	transform: translateX(-50%); /* Center align the line */
+	bottom: 0; /* No gap between the text and line */
+}
+
+#aboutUsBanner p {
+	color: #000000;
+	text-align: center;
+	font-size: 1em;
+	padding-bottom: 2em;
 }
 
 /* Row */
@@ -429,13 +467,14 @@ header>p {
 .image-container {
     display: inline-block; /* Shrink-wrap content */
     text-align: center; /* Center-align text */
-    background-color: white; /* White background for the entire container */
+    background-color: #211f1f; /* White background for the entire container */
     padding: 20px; /* Spacing inside the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     border-radius: 8px; /* Rounded corners */
     box-sizing: border-box; /* Ensure padding doesn't affect size */
     width: 100%; /* Ensure it fills parent column width */
     height: auto; /* Adjust height dynamically based on content */
+	margin-top: 20px;
 }
 
 /* Agent Image */
@@ -459,6 +498,7 @@ header>p {
     font-size: 1.2em;
     font-weight: bold;
     line-height: 1.4;
+	color: #ffffff;
 }
 
 /* Contact Information */
@@ -466,6 +506,7 @@ header>p {
     margin: 0;
     font-size: 0.9em;
     line-height: 1.4;
+	color: #ffffff;
 }
 
 /* Images styling */
@@ -2011,7 +2052,7 @@ header>p {
 	background-size: cover;
 	background-attachment: fixed;
 	z-index: 1;
-	height: 500px;
+	height: 400px;
 	text-align: center;
 	/* Center text horizontally */
 }
@@ -2918,7 +2959,6 @@ table.default thead {
 
 	#main {
 		border-top-width: 0;
-		background-color: #d6d6d6;
 	}
 
 	/* Sidebar */
@@ -3133,6 +3173,10 @@ table.default thead {
 		transform: translateX(0);
 	}
 
+	#aboutUsBanner{
+		height: 30em;
+	}
+
 }
 
 /* Small */
@@ -3270,6 +3314,10 @@ table.default thead {
 		margin-top: 30px;
 	}
 
+	#aboutUsBanner{
+		height: 35em;
+	}
+
 }
 
 /* Small */
@@ -3283,6 +3331,10 @@ table.default thead {
 	textarea,
 	select {
 		font-size: 10pt;
+	}
+
+	#aboutUsBanner{
+		height: 80em;
 	}
 
 }
