@@ -1299,8 +1299,20 @@ body {
     padding: 20px;
     width: 22%; /* 4 boxes per row (100% / 4 = 25% per box, with some gap space) */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    text-align: center;
     height: auto; /* Allow height to grow with content */
+}
+
+.testimonial-box h1 {
+    font-size: 1.5em;
+    color: #232323;
+    margin-bottom: 0.5em;
+}
+
+.testimonial-box p {
+    font-size: 1em;
+    color: #525252 !important;
+    margin-bottom: 1em;
 }
 
 
