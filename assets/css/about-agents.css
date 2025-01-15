@@ -479,6 +479,7 @@ ul.meta li:before {
 ul.menu {
 	list-style: none;
 	padding-left: 0;
+    margin-top: 4em;
 }
 
 ul.menu li {
@@ -969,7 +970,7 @@ ul.menu li:first-child {
 		transform: translateX(0);
 	}
 
-	#aboutUsBanner {
+	#TestimonialsBanner {
 		height: 30em;
 	}
 
@@ -1110,7 +1111,7 @@ ul.menu li:first-child {
 		margin-top: 30px;
 	}
 
-	#aboutUsBanner {
+	#TestimonialsBanner {
 		height: 35em;
 	}
 
@@ -1129,8 +1130,195 @@ ul.menu li:first-child {
 		font-size: 10pt;
 	}
 
-	#aboutUsBanner {
+	#TestimonialsBanner {
 		height: 80em;
 	}
 
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 10em; /* Added padding to give space at the top */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0; /* Set margin-top to 0 or adjust as needed */
+}
+
+.columns {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    gap: 0px;
+}
+
+.column {
+    padding: 0; /* Remove padding so the image can fill the space */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the image stays within rounded corners */
+}
+
+.column img {
+    width: 100%; /* Ensures the image takes the full width of the column */
+    height: 100%; /* Ensures the image takes the full height of the column */
+    object-fit: cover; /* Maintains aspect ratio while filling the column */
+    display: block; /* Removes any extra spacing around the image */
+}
+
+.column-33 {
+    flex: 0 0 33%; /* Sets column to occupy 33% of the row width */
+    background-color: #cecece;
+    border-radius: 1px; /* Optional, for consistent styling */
+    overflow: hidden; /* Ensures content stays within the column */
+}
+.column-66 {
+    padding: 16px;
+    flex: 0 0 66%;
+    background-color: #cecece;
+    border-radius: 1px;
+}
+
+.column-66 h1 {
+    font-size: 35px;
+    color: #242424;
+    margin-bottom: 0;
+}
+
+.column-66 h2 {
+    font-size: 24px;
+    color: #383838;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.column-66 p {
+    font-size: 16px;
+    color: #525252;
+}
+
+
+#image-icons {
+    margin-top: 20px;  /* Adds some space at the top */
+}
+
+#image-icons .socials {
+    display: flex;                /* Ensures horizontal layout for the list */
+    justify-content: center;       /* Centers the icons horizontally */
+    align-items: center;           /* Aligns icons vertically */
+    padding: 0;                    /* Remove default padding */
+    list-style-type: none;         /* Removes bullet points from list */
+    margin-bottom: 5px;
+}
+
+#image-icons .socials li {
+    margin: 0 5px;               /* Add horizontal space between the icons */
+}
+
+#image-icons .socials img {
+    width: 40px;                  /* Set the width of each icon */
+    height: 40px;                 /* Set the height of each icon */
+    object-fit: cover;            /* Ensures icons fully fill the space, cropping excess */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#image-icons .socials img:hover {
+    transform: translateY(-3px);   /* Shifts the icons upward on hover */
+}
+
+#TestimonialsBanner {
+    background-color: #cecece;
+    text-align: center;
+    height: auto; /* Changed to auto to accommodate content size */
+    width: 100%;
+    margin-top: 5em;
+    padding: 1em 0; /* Added padding for spacing */
+}
+
+#TestimonialsBanner h2 {
+    color: #000000;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 7px;
+    padding-top: .5em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#TestimonialsBanner h2::after {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 2px;
+    background-color: #a8823d;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+#TestimonialsBanner p {
+    color: #000000;
+    text-align: center;
+    font-size: 1em;
+    padding-bottom: 0em;
+    margin-bottom: 1.4em;
+}
+
+/* Box container styling */
+.testimonial-boxes {
+    display: flex;
+    flex-wrap: wrap; /* Allows boxes to wrap to the next line */
+    justify-content: space-between; /* Distribute space evenly */
+    gap: 1.5em; /* Spacing between boxes */
+    margin-top: 0em;
+    margin-bottom: 5em;
+}
+
+.testimonial-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 22%; /* 4 boxes per row (100% / 4 = 25% per box, with some gap space) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: auto; /* Allow height to grow with content */
+}
+
+
+
+@media (max-width: 1024px) {
+    .testimonial-box {
+        width: 48%; /* 2 boxes per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-box {
+        width: 100%; /* 1 box per row on smaller screens */
+    }
+    .columns {
+        flex-direction: column;
+    }
+    .column {
+        flex: 1;
+    }
 }
