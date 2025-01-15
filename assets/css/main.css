@@ -509,6 +509,15 @@ header>p {
 	color: #ffffff;
 }
 
+a {
+    text-decoration: none;
+}
+
+.agent-details a {
+    text-decoration: none;
+}
+
+
 /* Images styling */
 .agent-img {
     width: 100%;          /* Fully responsive */
