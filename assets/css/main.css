@@ -2822,8 +2822,9 @@ table.default thead {
 	color: #ffffff;
 	background-color: #a8823d;
 	border-color: #a8823d;
+	transform: scale(1.01); /* Slight zoom on hover */
+    transition: all 0.3s ease;
 }
-
 #banner .content .button:active {
 	color: #ffffff;
 	background-color: #000000;
