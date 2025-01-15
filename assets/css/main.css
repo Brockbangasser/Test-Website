@@ -379,9 +379,11 @@ header>p {
 	.container {
 		width: 30em;
 	}
+
 	.col-4 {
-        width: 100%; /* 1 column for small screens */
-    }
+		width: 100%;
+		/* 1 column for small screens */
+	}
 }
 
 @media screen and (max-width: 360px) {
@@ -389,17 +391,20 @@ header>p {
 	.container {
 		width: 10em;
 	}
+
 	.col-4 {
-        width: 100%; /* 1 column for small screens */
-    }
+		width: 100%;
+		/* 1 column for small screens */
+	}
 
 }
 
 #aboutUsBanner {
 	background-color: #ffffff;
-	text-align: center; /* Centers the entire content */
+	text-align: center;
+	/* Centers the entire content */
 	height: 22em;
-	
+
 }
 
 #aboutUsBanner h2 {
@@ -408,23 +413,33 @@ header>p {
 	text-transform: uppercase;
 	font-size: 3em;
 	text-align: center;
-	position: relative; /* Needed for positioning the pseudo-element */
-	display: inline-block; /* Ensures the width is only as wide as the text */
+	position: relative;
+	/* Needed for positioning the pseudo-element */
+	display: inline-block;
+	/* Ensures the width is only as wide as the text */
 	padding-bottom: 7px;
 	padding-top: 1.3em;
-	word-wrap: break-word; /* Break long words */
-	overflow-wrap: break-word; /* Break words cleanly */
+	word-wrap: break-word;
+	/* Break long words */
+	overflow-wrap: break-word;
+	/* Break words cleanly */
 }
 
 #aboutUsBanner h2::after {
 	content: "";
 	position: absolute;
-	width: 140%; /* Adjust to make it 1.25x the text width */
-	height: 2px; /* Line thickness */
-	background-color: #a8823d; /* Line color */
-	left: 50%; /* Start at the middle */
-	transform: translateX(-50%); /* Center align the line */
-	bottom: 0; /* No gap between the text and line */
+	width: 140%;
+	/* Adjust to make it 1.25x the text width */
+	height: 2px;
+	/* Line thickness */
+	background-color: #a8823d;
+	/* Line color */
+	left: 50%;
+	/* Start at the middle */
+	transform: translateX(-50%);
+	/* Center align the line */
+	bottom: 0;
+	/* No gap between the text and line */
 }
 
 #aboutUsBanner p {
@@ -436,124 +451,159 @@ header>p {
 
 /* Row */
 #agentsGrid {
-    display: flex;
-    justify-content: center; /* Center the grid horizontally */
-    align-items: center;     /* Center the grid vertically */
-    flex-wrap: wrap;         /* Allow wrapping for responsiveness */
-    max-width: 80%;          /* Optional: Limit width for aesthetics */
-    margin: 0 auto;          /* Center the grid container itself */
+	display: flex;
+	justify-content: center;
+	/* Center the grid horizontally */
+	align-items: center;
+	/* Center the grid vertically */
+	flex-wrap: wrap;
+	/* Allow wrapping for responsiveness */
+	max-width: 80%;
+	/* Optional: Limit width for aesthetics */
+	margin: 0 auto;
+	/* Center the grid container itself */
 }
 
 /* Individual rows within the grid */
 .row {
-    display: flex;
-    justify-content: space-evenly; /* Distribute columns evenly across the row */
-    align-items: center;          /* Vertically align the columns */
-    width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	/* Distribute columns evenly across the row */
+	align-items: center;
+	/* Vertically align the columns */
+	width: 100%;
 }
 
 /* Columns for images */
 .col-4 {
-    flex-basis: 33.33%; /* 3 columns by default */
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+	flex-basis: 33.33%;
+	/* 3 columns by default */
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* Image container to position the details box below the image */
 /* Wrapper for the entire agent card */
 .image-container {
-    display: inline-block; /* Shrink-wrap content */
-    text-align: center; /* Center-align text */
-    background-color: #211f1f; /* White background for the entire container */
-    padding: 20px; /* Spacing inside the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
-    width: 100%; /* Ensure it fills parent column width */
-    height: auto; /* Adjust height dynamically based on content */
+	display: inline-block;
+	/* Shrink-wrap content */
+	text-align: center;
+	/* Center-align text */
+	background-color: #211f1f;
+	/* White background for the entire container */
+	padding: 20px;
+	/* Spacing inside the container */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	/* Subtle shadow for depth */
+	border-radius: 8px;
+	/* Rounded corners */
+	box-sizing: border-box;
+	/* Ensure padding doesn't affect size */
+	width: 100%;
+	/* Ensure it fills parent column width */
+	height: auto;
+	/* Adjust height dynamically based on content */
 	margin-top: 20px;
 }
 
 /* Agent Image */
 .agent-img {
-    width: 100%; /* Full width */
-    aspect-ratio: 1 / 1; /* Square image */
-    object-fit: cover; /* Maintain aspect ratio within the container */
-    border-radius: 8px; /* Match container’s rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Subtle shadow */
+	width: 100%;
+	/* Full width */
+	aspect-ratio: 1 / 1;
+	/* Square image */
+	object-fit: cover;
+	/* Maintain aspect ratio within the container */
+	border-radius: 8px;
+	/* Match container’s rounded corners */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	/* Optional: Subtle shadow */
 }
 
 /* Agent Details */
 .agent-details {
-    margin-top: .2em; /* Space between the image and the text */
-    text-align: center;
+	margin-top: .2em;
+	/* Space between the image and the text */
+	text-align: center;
 }
 
 /* Agent Name (Heading) */
 .agent-details h3 {
-    margin: 0;
-    font-size: 1.2em;
-    font-weight: bold;
-    line-height: 1.4;
+	margin: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.4;
 	color: #ffffff;
 }
 
 /* Contact Information */
 .agent-details p {
-    margin: 0;
-    font-size: 0.9em;
-    line-height: 1.4;
+	margin: 0;
+	font-size: 0.9em;
+	line-height: 1.4;
 	color: #ffffff;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .agent-details a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 
 /* Images styling */
 .agent-img {
-    width: 100%;          /* Fully responsive */
-    aspect-ratio: 1 / 1;  /* Square images */
-    object-fit: cover;    /* Ensure image content fills the square */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
-    z-index: 1;           /* Ensure the image is above the details box */
-	border-radius: 8px;   /* Rounded corners */
+	width: 100%;
+	/* Fully responsive */
+	aspect-ratio: 1 / 1;
+	/* Square images */
+	object-fit: cover;
+	/* Ensure image content fills the square */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	/* Optional: Shadow effect */
+	z-index: 1;
+	/* Ensure the image is above the details box */
+	border-radius: 8px;
+	/* Rounded corners */
 }
 
 
 
 /* Dialog box hidden by default */
 .dialog-box {
-    position: absolute;
-    top: 50%;
-    left: 100%; /* Always position to the right of the image */
-    transform: translateX(20%) translateY(-50%); /* Slight offset to the right */
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
-    color: white;
-    padding: 1em;
-    display: none; /* Hidden initially */
-    opacity: 0;
-    z-index: 1000;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	/* Always position to the right of the image */
+	transform: translateX(20%) translateY(-50%);
+	/* Slight offset to the right */
+	background-color: rgba(0, 0, 0, 0.7);
+	/* Dark background for contrast */
+	color: white;
+	padding: 1em;
+	display: none;
+	/* Hidden initially */
+	opacity: 0;
+	z-index: 1000;
 }
 
 
 .image-container:hover .dialog-box {
-    display: block;
-    opacity: 1; /* Make it visible */
+	display: block;
+	opacity: 1;
+	/* Make it visible */
 }
 
 /* Optional: add a hover effect for the images */
 .image-container:hover {
-    transform: scale(1.03); /* Slight zoom on hover */
-    transition: transform 0.3s ease-in-out;
+	transform: scale(1.03);
+	/* Slight zoom on hover */
+	transition: transform 0.3s ease-in-out;
 }
 
 
@@ -2822,9 +2872,11 @@ table.default thead {
 	color: #ffffff;
 	background-color: #a8823d;
 	border-color: #a8823d;
-	transform: scale(1.01); /* Slight zoom on hover */
-    transition: all 0.3s ease;
+	transform: scale(1.01);
+	/* Slight zoom on hover */
+	transition: all 0.3s ease;
 }
+
 #banner .content .button:active {
 	color: #ffffff;
 	background-color: #000000;
@@ -3183,7 +3235,7 @@ table.default thead {
 		transform: translateX(0);
 	}
 
-	#aboutUsBanner{
+	#aboutUsBanner {
 		height: 30em;
 	}
 
@@ -3324,7 +3376,7 @@ table.default thead {
 		margin-top: 30px;
 	}
 
-	#aboutUsBanner{
+	#aboutUsBanner {
 		height: 35em;
 	}
 
@@ -3343,7 +3395,7 @@ table.default thead {
 		font-size: 10pt;
 	}
 
-	#aboutUsBanner{
+	#aboutUsBanner {
 		height: 80em;
 	}
 
