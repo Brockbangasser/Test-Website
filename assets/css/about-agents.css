@@ -1169,7 +1169,6 @@ body {
 .column {
     padding: 0; /* Remove padding so the image can fill the space */
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden; /* Ensures the image stays within rounded corners */
 }
@@ -1190,7 +1189,7 @@ body {
 .column-66 {
     padding: 16px;
     flex: 0 0 66%;
-    background-color: #cecece;
+    background-color: #ffffff;
     border-radius: 1px;
 }
 
@@ -1214,16 +1213,16 @@ body {
 
 
 #image-icons {
-    margin-top: 20px;  /* Adds some space at the top */
+	margin-top: 20px;  /* Adds some space at the top */
 }
 
 #image-icons .socials {
-    display: flex;                /* Ensures horizontal layout for the list */
-    justify-content: center;       /* Centers the icons horizontally */
-    align-items: center;           /* Aligns icons vertically */
-    padding: 0;                    /* Remove default padding */
-    list-style-type: none;         /* Removes bullet points from list */
-    margin-bottom: 5px;
+	display: flex;                /* Ensures horizontal layout for the list */
+	justify-content: flex-start;  /* Aligns the icons to the left */
+	align-items: center;          /* Aligns icons vertically */
+	padding: 0;                   /* Remove default padding */
+	list-style-type: none;        /* Removes bullet points from list */
+	margin-bottom: 5px;
 }
 
 #image-icons .socials li {
